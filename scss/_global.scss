@@ -109,8 +109,6 @@ header {
 
             a {
               font-size: 2rem;
-              color: #fff;
-              text-decoration: none;
               text-transform: uppercase;
               padding: 1rem 2rem;
               transition: color .3s ease-in-out, background-color .3s ease-in-out;
@@ -152,8 +150,6 @@ footer {
           justify-content: center;
 
           a {
-            color: #fff;
-            text-decoration: none;
             padding: .5rem 1rem;
             position: relative;
 
@@ -175,10 +171,26 @@ footer {
       display: flex;
       justify-content: space-between;
 
-      svg{
+      a {
+        padding: 1.2rem;
+        display: inline-block;
+
+        &:hover svg,
+        &:focus svg {
+            transform: scale(1.2);
+        }
+      }
+
+      svg {
         height: 3.6rem;
+        transition: transform .3s ease-in-out;
       }
     }
+}
+
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 h1 {
@@ -197,11 +209,35 @@ h4 {
   font-size: 1.6rem;
 }
 
-article {
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+section article {
   line-height: 1.5;
 
     .learn-more {
       background-color: $primary;
+      border-radius: 0 0 .4rem .4rem;
+      display: flex;
+      justify-content: center;
+      margin-left: -1.5rem;
+      margin-right: -1.5rem;
+      font-size: 2.4rem;
+      font-weight: 600;
+
+      svg {
+        fill: transparent;
+        width: 2rem;
+        margin-left: 1.6rem;
+        transition: transform .3s ease-in-out;
+      }
+
+      &:hover svg,
+      &:focus svg {
+        transform: translateX(50%) scale(1.1);
+      }
     }
 }
 
@@ -212,9 +248,4 @@ article {
   margin-inline-start: auto;
   margin-inline-end: auto;
   align-items: center;
-}
-
-// temporaire
-svg {
-  height : 5rem;
 }
