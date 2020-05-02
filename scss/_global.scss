@@ -81,3 +81,140 @@
 // ATTENTION --- Tout ce qui est commun à toutes les pages
 // ATTENTION --- Sinon, nouveau fichier scss
 
+body {
+  color: $noir;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  background-color: $primary;
+  color: #fff;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+    .header-title {
+      grid-column: span 1;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      font-size: 4.8rem;
+    }
+
+    nav {
+      grid-column: span 11;
+
+        .menu {
+          display: flex;
+          align-items: baseline;
+          justify-content: flex-end;
+
+            a {
+              font-size: 2rem;
+              color: #fff;
+              text-decoration: none;
+              text-transform: uppercase;
+              padding: 1rem 2rem;
+              transition: color .3s ease-in-out, background-color .3s ease-in-out;
+
+                &:hover,
+                &:focus {
+                  color: $primary;
+                  background-color: #fff;
+                }
+            }
+        }
+    }
+}
+
+footer {
+  background-color: $primary;
+  color: #fff;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+    .contact-information {
+      grid-column: span 4;
+
+        p {
+          margin-top: .8rem;
+        }
+
+        span {
+          display: block;
+          margin-top: .8rem;
+        }
+    }
+
+    nav {
+      grid-column: span 6;
+
+        .admin-links {
+          display: flex;
+          justify-content: center;
+
+          a {
+            color: #fff;
+            text-decoration: none;
+            padding: .5rem 1rem;
+            position: relative;
+
+              &:hover::after,
+              &:focus::after {
+                content: "";
+                width: calc(100% - 2rem);
+                border: .5px #fff solid;
+                position: absolute;
+                left: 1rem;
+                bottom: 0;
+              }
+          }
+        }
+    }
+
+    .social-networks {
+      grid-column: span 2;
+      display: flex;
+      justify-content: space-between;
+
+      svg{
+        height: 3.6rem;
+      }
+    }
+}
+
+h1 {
+  font-size: 4.8rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+article {
+  line-height: 1.5;
+
+    .learn-more {
+      background-color: $primary;
+    }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  max-width: 80%; // à modifier pour le responsif
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  align-items: center;
+}
+
+// temporaire
+svg {
+  height : 5rem;
+}
