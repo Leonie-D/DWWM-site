@@ -249,3 +249,28 @@ section article {
   margin-inline-end: auto;
   align-items: center;
 }
+
+.pagination {
+  grid-column: span 12;
+  display: flex;
+  justify-content: center;
+
+  a {
+    border: 1px solid $primary;
+    border-radius: .4rem;
+    color: $primary;
+    height: 3rem;
+    width: 3rem;
+    padding: .5rem 1rem;
+    transition: color .3s ease-in-out, background-color .3s ease-in-out;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    &:hover,
+    &:focus,
+    &[class="active"] {
+      color: #fff;
+      background-color: $primary;
+    }
+  }
+}
