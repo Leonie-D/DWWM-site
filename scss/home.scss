@@ -58,10 +58,6 @@
     .container {
         column-gap: 3.2rem;
     }
-
-    article {
-        @extend %cards;
-    }
 }
 
 .news article {
