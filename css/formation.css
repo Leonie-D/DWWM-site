@@ -1,0 +1,3 @@
+.modules article{box-shadow:0px 0px 48px rgba(0,0,0,0.16);padding-left:1.5rem;padding-right:1.5rem}.modules article img{margin-left:-1.5rem;margin-right:-1.5rem;max-width:calc(100% + 3rem);border-radius:.4rem .4rem 0 0}.modules article .date{display:flex;align-items:center;color:#663014}.modules article svg{width:1.5rem;fill:transparent;margin-right:.8rem}.modules article h3{font-family:"Raleway", sans-serif;font-weight:600;font-size:2.4rem}.modules article h3+p{font-size:2rem}.container{row-gap:4rem}h1{grid-column:span 12;text-align:center}.description{max-width:65%;grid-column:span 12;justify-self:center}.modules{padding-top:0}.modules .container{column-gap:3.2rem}.modules article{grid-column:span 6}
+
+/*# sourceMappingURL=formation.css.map */
