@@ -1,5 +1,3 @@
-@import "variables";
-
 .container {
     row-gap: 4rem;
 }
@@ -22,8 +20,7 @@ h1 {
         column-gap: 3.2rem;
     }
 
-    article {
-        @extend %cards;
+    .card {
         grid-column: span 6;
     }
 }
