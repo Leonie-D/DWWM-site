@@ -114,7 +114,8 @@ header {
               transition: color .3s ease-in-out, background-color .3s ease-in-out;
 
                 &:hover,
-                &:focus {
+                &:focus,
+                &[class="active"] {
                   color: $primary;
                   background-color: #fff;
                 }
