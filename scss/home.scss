@@ -1,7 +1,8 @@
+@import "variables";
+
 .hero {
     background-image: url(../img/background.jpg);
     background-size: cover;
-    min-height: calc(85vh - 12rem);
 
     .hero-content {
         grid-column: -1;
@@ -13,7 +14,8 @@
         flex-direction: column;
         align-items: flex-end;
         padding: 2.5rem;
-        // il faut encore gérer la disposition verticale...
+        margin-top: 20vh;
+        margin-bottom: 10vh;
     }
 
     h1 {
@@ -58,38 +60,7 @@
     }
 
     article {
-        box-shadow: 0px 0px 48px rgba(0, 0, 0, 0.16);
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-
-        img {
-            margin-left: -1.5rem;
-            margin-right: -1.5rem;
-            max-width: calc(100% + 3rem);
-            border-radius: .4rem .4rem 0 0;
-        }
-
-        .date {
-            display: flex;
-            align-items: center;
-            color: $marron;
-        }
-
-        svg {
-            width: 1.5rem;
-            fill: transparent;
-            margin-right: .8rem;
-        }
-
-        h3 {
-            font-family: "Raleway", sans-serif;
-            font-weight: 600;
-            font-size: 2.4rem;
-
-            &+p {
-                font-size: 2rem;
-            }
-        }
+        @extend %cards;
     }
 }
 
