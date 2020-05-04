@@ -77,10 +77,6 @@
 // }
 
 // ---------------------- Style ------------------------
-
-// ATTENTION --- Tout ce qui est commun à toutes les pages
-// ATTENTION --- Sinon, nouveau fichier scss
-
 body {
   color: $noir;
   font-family: 'Montserrat', sans-serif;
@@ -228,18 +224,6 @@ a {
       border-radius: .4rem .4rem 0 0;
   }
 
-  .date {
-      display: flex;
-      align-items: center;
-      color: $marron;
-  }
-
-  svg {
-      width: 1.5rem;
-      fill: transparent;
-      margin-right: .8rem;
-  }
-
   h3 {
       font-family: "Raleway", sans-serif;
       font-weight: 600;
@@ -274,6 +258,18 @@ a {
   }
 }
 
+.date {
+  display: flex;
+  align-items: center;
+  color: $marron;
+
+  svg {
+    width: 1.5rem;
+    fill: transparent;
+    margin-right: .8rem;
+  }
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -281,6 +277,13 @@ a {
   margin-inline-start: auto;
   margin-inline-end: auto;
   align-items: center;
+}
+
+main {
+  .container {
+    column-gap: 3.2rem;
+    row-gap: 4rem;
+  }
 }
 
 .pagination {
