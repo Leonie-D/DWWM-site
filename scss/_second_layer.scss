@@ -14,7 +14,7 @@
     row-gap: 2.4rem;
 
     img {
-        width: 220px;
+        height: 22rem;
         display: inline-block;
     }
 
@@ -23,24 +23,18 @@
     }
 }
 
-.description-courses {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    font-size: 2.4rem;
-}
-
 .introduction {
     padding-bottom: 0;
 
     .description {
-        @extend .description-courses;
+        max-width: 65%;
         grid-column: span 12;
         justify-self: center;
     }
 }
 
 .article-simple {
-    font-size: 2rem;
+    max-width: 55%;
     margin-right: auto;
     margin-left: auto;
 
@@ -52,13 +46,6 @@
         max-width: min-content;
         margin-right: auto;
         margin-left: auto;
-    }
-}
-
-@media screen and (min-width: 48em) {
-    .introduction .description,
-    .article-simple {
-        max-width: 65%;
     }
 }
 
@@ -79,7 +66,7 @@
     }
 
     img {
-        width: 400px;
+        height: 40rem;
         justify-self: center;
         border-radius: 50%;
     } 
@@ -89,10 +76,9 @@
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         row-gap: 4rem;
-        text-align: center;
 
         li {
-            grid-column: span 12;
+            grid-column: span 3;
 
             h3 {
                 font-size: 2.4rem;
@@ -103,23 +89,9 @@
                 font-size: 2rem;
             }
         }
-    }
-}
 
-@media screen and (min-width: 36em) {
-    .student-single .student-details {
-        text-align: start;
-        
-        li:not(:last-of-type) {
-            grid-column: span 6;
-        }
-    }
-}
-
-@media screen and (min-width: 48em) {
-    .student-single .student-details {
-        li:not(:last-of-type) {
-            grid-column: span 3;
+        li:last-of-type {
+            grid-column: span 12;
         }
     }
 }
@@ -132,8 +104,14 @@
     row-gap: 3rem;
     column-gap: 3rem;
 
-    .left,
-    .right,
+    .left {
+        grid-column: 1 / 6;
+    }
+    
+    .right {
+        grid-column: 6 / 13;
+    }
+    
     .both {
         grid-column: span 12;
     }
@@ -177,16 +155,4 @@
           transform: translateX(50%) scale(1.1);
         }
       }
-}
-
-@media screen and (min-width: 36em) {
-    .contact-form {
-        .left {
-            grid-column: 1 / 6;
-        }
-        
-        .right {
-            grid-column: 6 / 13;
-        }
-    }
 }
