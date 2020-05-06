@@ -97,6 +97,18 @@
         flex-direction: column;
         align-items: center;
 
+    li {
+        grid-column: span 12;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+<<<<<<< HEAD
+        max-width: max-content;
+        position: relative;
+=======
+>>>>>>> responsive
+>>>>>>> Stashed changes
+
         & > * {
             margin-bottom: 2rem;
         }
