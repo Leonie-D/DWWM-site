@@ -127,7 +127,8 @@ footer {
   padding-bottom: 4rem;
 
     .contact-information {
-      grid-column: span 4;
+      grid-column: span 12;
+      text-align: center;
 
         p {
           margin-top: .8rem;
@@ -140,14 +141,20 @@ footer {
     }
 
     nav {
-      grid-column: span 6;
+      grid-column: span 12;
+      margin-top: 2rem;
 
         .admin-links {
           display: flex;
-          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+
+          li {
+            margin-bottom: 2rem;
+          }
 
           a {
-            padding: .5rem 1rem;
+            padding: 1rem .5rem;
             position: relative;
 
               &:hover::after,
@@ -164,7 +171,7 @@ footer {
     }
 
     .social-networks {
-      grid-column: span 2;
+      grid-column: 4/-4;
       display: flex;
       justify-content: space-between;
 
@@ -183,6 +190,41 @@ footer {
         transition: transform .3s ease-in-out;
       }
     }
+}
+
+@media screen and (min-width: 36em) {
+  footer {
+    nav {
+      grid-column: 3/-3;
+
+      .admin-links {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 48em) {
+  footer {
+    .contact-information {
+      grid-column: span 4;
+      text-align: start;
+    }
+
+    nav {
+      grid-column: span 6;
+      
+      .admin-links {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    .social-networks {
+      grid-column: span 2;
+    }
+  }
 }
 
 section {
@@ -273,16 +315,41 @@ a {
 .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  max-width: 80%; // à modifier pour le responsif
-  margin-inline-start: auto;
-  margin-inline-end: auto;
+  max-width: 100%;
   align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 main {
   .container {
-    column-gap: 3.2rem;
     row-gap: 4rem;
+  }
+}
+
+@media screen and (min-width: 68em) {
+  .container {
+    max-width: 85%;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+  }
+
+  main {
+    .container {
+      column-gap: 3.2rem;
+    }
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .container {
+    max-width: 75%;
+  }
+}
+
+@media screen and (min-width: 100em) {
+  .container {
+    max-width: 65%;
   }
 }
 

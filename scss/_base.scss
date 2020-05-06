@@ -1,8 +1,18 @@
-/* Pour définir toutes les polices en relatif et multiple de 10px (par défaut ou proportionnellement aux réglages de l'utilisateur le cas échéant) */
 html {
-    font-size: .625em; /* fallback IE8+ */
-    font-size: calc(1em * .625); /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
+    // redéfinition de toutes les proportions utilisant l'utité "rem" à 80% des tailles de la maquette pour disposition similaire à écran plus petit (pas possibilité de tester sur autres machines que MacBook...) 
+    font-size: calc(.625em * 0.8); /* fallback IE8+ */
+    font-size: calc(1em * .625 * 0.8); /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
     scroll-behavior: smooth;
+}
+
+// --------------------- Responsif & font-size ---------
+
+@media screen and (min-width: 100em) {
+  html {
+    // tailles de polices initiale
+    font-size: .625em;
+    font-size: calc(1em * .625);
+  }
 }
 
 /* Box sizing rules */

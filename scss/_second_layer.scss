@@ -14,7 +14,8 @@
     row-gap: 2.4rem;
 
     img {
-        height: 22rem;
+        height: 220px;
+        width: 220px;
         display: inline-block;
     }
 
@@ -23,10 +24,17 @@
     }
 }
 
+.description-courses {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+}
+
 .introduction {
     padding-bottom: 0;
 
     .description {
+        @extend .description-courses;
         max-width: 65%;
         grid-column: span 12;
         justify-self: center;
@@ -34,7 +42,8 @@
 }
 
 .article-simple {
-    max-width: 55%;
+    font-size: 2rem;
+    max-width: 65%;
     margin-right: auto;
     margin-left: auto;
 
@@ -66,7 +75,8 @@
     }
 
     img {
-        height: 40rem;
+        height: 400px;
+        width: 400px;
         justify-self: center;
         border-radius: 50%;
     } 
