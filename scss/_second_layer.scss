@@ -36,6 +36,13 @@
     .description {
         @extend .description-courses;
         max-width: 65%;
+=======
+        @extend .description-courses;
+<<<<<<< HEAD
+=======
+        max-width: 65%;
+>>>>>>> responsive
+>>>>>>> Stashed changes
         grid-column: span 12;
         justify-self: center;
     }
