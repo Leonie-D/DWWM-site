@@ -14,7 +14,6 @@
     row-gap: 2.4rem;
 
     img {
-        height: 220px;
         width: 220px;
         display: inline-block;
     }
@@ -35,14 +34,6 @@
 
     .description {
         @extend .description-courses;
-        max-width: 65%;
-=======
-        @extend .description-courses;
-<<<<<<< HEAD
-=======
-        max-width: 65%;
->>>>>>> responsive
->>>>>>> Stashed changes
         grid-column: span 12;
         justify-self: center;
     }
@@ -50,7 +41,6 @@
 
 .article-simple {
     font-size: 2rem;
-    max-width: 65%;
     margin-right: auto;
     margin-left: auto;
 
@@ -62,6 +52,13 @@
         max-width: min-content;
         margin-right: auto;
         margin-left: auto;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .introduction .description,
+    .article-simple {
+        max-width: 65%;
     }
 }
 
@@ -82,7 +79,6 @@
     }
 
     img {
-        height: 400px;
         width: 400px;
         justify-self: center;
         border-radius: 50%;
