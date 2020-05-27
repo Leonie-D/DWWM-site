@@ -11,7 +11,10 @@
         <div class="container">
             <p class="header-title">DWWM</p>
             <nav>
-                <ul class="menu">
+                <button class="toggle-menu" aria-expanded="false" aria-controls="menu">
+                    <span class="screen-reader-text">Menu</span>
+                </button>
+                <ul class="menu" id="menu" hidden>
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="formations.html">La formation</a></li>
                     <li><a href="etudiants.html">Les étudiants</a></li>
@@ -24,7 +27,7 @@
     <main>
         <section class="news article-simple">
             <div class="container">
-                <img src="img/keyboardBiger.jpg" alt="">
+                <img src="img/keyboardBiger.jpg" alt="clavir d'ordinateur">
                 <h1>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</h1>
                 <p class="date">
                     <svg viewBox="0 0 16 17.667" xmlns="http://www.w3.org/2000/svg">
@@ -59,6 +62,7 @@
             <ul class="social-networks">
                 <li>
                     <a href="">
+                        <span class="screen-reader-text">Vers Facebook</span>
                         <svg viewBox="0 0 19.281 36" xmlns="http://www.w3.org/2000/svg">
                             <path d="m19.627 20.25 1-6.515h-6.252v-4.228c0-1.782.873-3.52 3.673-3.52h2.842v-5.547a34.658 34.658 0 0 0 -5.044-.44c-5.146 0-8.514 3.12-8.514 8.769v4.965h-5.723v6.516h5.723v15.75h7.043v-15.75z" fill="#fff" transform="translate(-1.609)"/>
                         </svg>
@@ -66,6 +70,7 @@
                 </li>
                 <li>
                     <a href="">
+                        <span class="screen-reader-text">Vers Twitter</span>
                         <svg viewBox="0 0 36 29.239" xmlns="http://www.w3.org/2000/svg">
                             <path d="m32.3 10.668c.023.32.023.64.023.959 0 9.754-7.424 20.992-20.992 20.992a20.85 20.85 0 0 1 -11.331-3.312 15.263 15.263 0 0 0 1.782.091 14.776 14.776 0 0 0 9.16-3.152 7.391 7.391 0 0 1 -6.9-5.117 9.3 9.3 0 0 0 1.393.114 7.8 7.8 0 0 0 1.942-.251 7.379 7.379 0 0 1 -5.916-7.241v-.091a7.431 7.431 0 0 0 3.339.94 7.389 7.389 0 0 1 -2.287-9.872 20.972 20.972 0 0 0 15.213 7.721 8.329 8.329 0 0 1 -.183-1.69 7.385 7.385 0 0 1 12.769-5.048 14.526 14.526 0 0 0 4.683-1.782 7.358 7.358 0 0 1 -3.244 4.066 14.791 14.791 0 0 0 4.249-1.142 15.86 15.86 0 0 1 -3.7 3.815z" fill="#fff" transform="translate(0 -3.381)"/>
                         </svg>
@@ -73,6 +78,7 @@
                 </li>
                 <li>
                     <a href="">
+                        <span class="screen-reader-text">Vers LinkedIn</span>
                         <svg viewBox="0 0 31.5 31.499" xmlns="http://www.w3.org/2000/svg">
                             <path d="m7.051 31.5h-6.531v-21.03h6.531zm-3.269-23.9a3.8 3.8 0 1 1 3.782-3.817 3.814 3.814 0 0 1 -3.782 3.817zm27.711 23.9h-6.517v-10.237c0-2.44-.049-5.569-3.4-5.569-3.4 0-3.916 2.651-3.916 5.393v10.413h-6.518v-21.03h6.263v2.869h.095a6.862 6.862 0 0 1 6.179-3.4c6.609 0 7.824 4.352 7.824 10.005v11.556z" fill="#fffefe" transform="translate(0 -.001)"/>
                         </svg>
@@ -81,5 +87,7 @@
             </ul>
         </div>
     </footer>
+
+    <script src="js/burger_menu.js"></script>
 </body>
 </html>
